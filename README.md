@@ -49,19 +49,19 @@ Para el caso de los siguientes catálogos la empresa ha decidido realizar las si
 
 ## Diseno logico
 
-![](DISENO_LOGICO/global.jpg)
+![](DISENO_LOGICO/diseno_global.jpg)
 
 ### Nodo 1
-![](DISENO_LOGICO/nodo1.jpg)
+![](DISENO_LOGICO/diseno_nodo1.jpg)
 
 ### Nodo 2
-![](DISENO_LOGICO/nodo2.jpg)
+![](DISENO_LOGICO/diseno_nodo2.jpg)
 
 ### Nodo 3
-![](DISENO_LOGICO/nodo3.jpg)
+![](DISENO_LOGICO/diseno_nodo3.jpg)
 
 ### Nodo 4
-![](DISENO_LOGICO/nodo4.jpg)
+![](DISENO_LOGICO/diseno_nodo4.jpg)
 
 
 ## Restricciones de referencia
@@ -82,16 +82,13 @@ Para el caso de los siguientes catálogos la empresa ha decidido realizar las si
 |`STATUS_AUTO`|`AUTO_F3`|`CAEH_S2`|
 |`MODELO_R`|`AUTO_F3`|`CAEH_S2`|
 |`MARCA_R`|`MODELO_R`|`CAEH_S2`|
-|`AUTO_F3`|`PAGO_AUTO_F1`|`CAEH_S2`|
-|`PAGO_AUTO_F1`|`CLIENTE_F1`|`CAEH_S2`|
+|`CLIENTE_F1`|`PAGO_AUTO_F1`|`CAEH_S2`|
 |`CLIENTE_F1`|`TARJETA_CLIENTE_F2`|`CAEH_S2`|
 |`STATUS_AUTO`|`HISTORICO_STATUS_AUTO_F2`|`IAEH_S1`|
 |`MARCA_R`|`MODELO_R`|`IAEH_S1`|
-|`PAGO_AUTO_F2`|`CLIENTE_F2`|`IAEH_S1`|
+|`CLIENTE_F2`|`PAGO_AUTO_F2`|`IAEH_S1`|
 |`CLIENTE_F2`|`TARJETA_CLIENTE_F1`|`IAEH_S1`|
-|`STATUS_AUTO`|`AUTO_F1`|`IAEH_S2`|
 |`STATUS_AUTO`|`HISTORICO_STATUS_AUTO_F1`|`IAEH_S2`|
-|`MODELO_R`|`AUTO_F1`|`IAEH_S2`|
 |`MARCA_R`|`MODELO_R`|`IAEH_S2`|
 |`AUTO_F1`|`PAGO_AUTO_F3`|`IAEH_S2`|
-|`PAGO_AUTO_F3`|`CLIENTE_F3`|`IAEH_S2`|
+|`CLIENTE_F3`|`PAGO_AUTO_F3`|`IAEH_S2`|

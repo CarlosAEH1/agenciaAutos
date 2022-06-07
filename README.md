@@ -19,12 +19,13 @@ Algunas sucursales cuentan o se asocian con otra llamada “sucursal anexa” em
 
 |Numero de nodo|Caracteristicas|Nombre global de PDB|Sitio para fragmentos|
 |:------------:|:-------------:|:------------------:|:-------------------:|
-|1|Ubicado en la region AME, tiene mayor capacidad de procesamiento.|caehbdd_s1.fi.unam|CAEH_S1|
-|2|Ubicado en la region EUR.|caehbdd_s2|CAEH_S2|
-|3|Cuenta con VPN ue conecta al servidor con las oficinas centrales de la empresa, asi como herramientas para cifrado de datos. Ubicado en EUA.|iaehbdd_s1.fi.unam|IAEH_S1|
-|4|Cuenta con herramientas para realizar procesamieno de contenido multimedia, asi como una gran capacidad de almacenamiento.|iaehbdd_s2.fi.unam|IAEH_S2|
+|1|Ubicado en la region AME, tiene mayor capacidad de procesamiento.|`caehbdd_s1.fi.unam`|`CAEH_S1`|
+|2|Ubicado en la region EUR.|`caehbdd_s2.fi.unam`|`CAEH_S2`|
+|3|Cuenta con VPN ue conecta al servidor con las oficinas centrales de la empresa, asi como herramientas para cifrado de datos. Ubicado en EUA.|`iaehbdd_s1.fi.unam`|`IAEH_S1`|
+|4|Cuenta con herramientas para realizar procesamieno de contenido multimedia, asi como una gran capacidad de almacenamiento.|`iaehbdd_s2.fi.unam`|`IAEH_S2`|
 
 ### Requerimientos para distribucion
+
 Para administrar el catálogo de países, se emplea el valor de la región. Países de América (AME) se almacenan en el nodo 1 y países de Europa (EUR) en el nodo 2. Para realizar la administración del catálogo de sucursales, la empresa considera las siguientes situaciones: Existe un conjunto de sucursales consideradas como sucursales administradoras. Todas estas sucursales tienen la característica que los primeros 5 caracteres de su clave corresponden con el carácter ‘0’, es decir: 00000. Para este conjunto de sucursales, la empresa ha decidido ubicarlas en el nodo 3 ya que los dueños de la empresa requieren el uso de la VPN para poder acceder a los datos de este conjunto de sucursales. Para las sucursales restantes, la empresa ha decidido emplear el mismo criterio que el catálogo de países.
 
 Para el caso de los autos se tienen las siguientes consideraciones. Las fotos de los autos deberán almacenarse en el nodo 4 por sus características de procesamiento multimedia. El resto de la información de cada auto debe almacenarse en el mismo sitio donde se encuentra su sucursal asignada. Los datos particulares de los autos de carga y de los particulares se almacenarán en el mismo sitio donde se almacenan los datos generales del auto. Cabe mencionar que a las sucursales administradoras no se les asignan autos por sus funciones de administración. Esto implica que solo se tendrán 2 grupos de autos.
@@ -62,3 +63,35 @@ Para el caso de los siguientes catálogos la empresa ha decidido realizar las si
 ### Nodo 4
 ![](DISENO_LOGICO/nodo4.jpg)
 
+
+## Restricciones de referencia
+
+|Nombre de la tabla padre|Nombre de la tabla hija|Sitio|
+|:----------------------:|:---------------------:|:---:|
+|`PAIS_F1`|`SUCURSAL_F2`|`CAEH_S1`|
+|`SUCURSAL_F2`|`AUTO_F2`|`CAEH_S1`|
+|`AUTO_F2`|`AUTO_PARTICULAR_F1`|`CAEH_S1`|
+|`AUTO_F2`|`AUTO_CARGA_F1`|`CAEH_S1`|
+|`STATUS_AUTO`|`AUTO_F2`|`CAEH_S1`|
+|`MODELO_R`|`AUTO_F2`|`CAEH_S1`|
+|`MARCA_R`|`MODELO_R`|`CAEH_S1`|
+|`PAIS_F2`|`SUCURSAL_F3`|`CAEH_S2`|
+|`SUCURSAL_F3`|`AUTO_F3`|`CAEH_S2`|
+|`AUTO_F3`|`AUTO_PARTICULAR_F2`|`CAEH_S2`|
+|`AUTO_F3`|`AUTO_CARGA_F2`|`CAEH_S2`|
+|`STATUS_AUTO`|`AUTO_F3`|`CAEH_S2`|
+|`MODELO_R`|`AUTO_F3`|`CAEH_S2`|
+|`MARCA_R`|`MODELO_R`|`CAEH_S2`|
+|`AUTO_F3`|`PAGO_AUTO_F1`|`CAEH_S2`|
+|`PAGO_AUTO_F1`|`CLIENTE_F1`|`CAEH_S2`|
+|`CLIENTE_F1`|`TARJETA_CLIENTE_F2`|`CAEH_S2`|
+|`STATUS_AUTO`|`HISTORICO_STATUS_AUTO_F2`|`IAEH_S1`|
+|`MARCA_R`|`MODELO_R`|`IAEH_S1`|
+|`PAGO_AUTO_F2`|`CLIENTE_F2`|`IAEH_S1`|
+|`CLIENTE_F2`|`TARJETA_CLIENTE_F1`|`IAEH_S1`|
+|`STATUS_AUTO`|`AUTO_F1`|`IAEH_S2`|
+|`STATUS_AUTO`|`HISTORICO_STATUS_AUTO_F1`|`IAEH_S2`|
+|`MODELO_R`|`AUTO_F1`|`IAEH_S2`|
+|`MARCA_R`|`MODELO_R`|`IAEH_S2`|
+|`AUTO_F1`|`PAGO_AUTO_F3`|`IAEH_S2`|
+|`PAGO_AUTO_F3`|`CLIENTE_F3`|`IAEH_S2`|

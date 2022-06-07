@@ -31,7 +31,7 @@ VersionId,Version_ID,Copyright,Global_User_ID,Row_Time_Stamp
 
 Diagram
 DiagramId,Version_ID,VersionId,LastUpdate,CreateDate,ActiveModel,ActiveSubmodel,VSplitterPosition,X,Y,Width,Height,DiagramNameId,AuthorId,CompanyId,VersionNoId,CopyrightStringId,DefinitionId,UnificationOptionId,FileNameId,CopyrightYearStringId,DiagramName,CodePage,SignatureGUID,ReleaseName,Flags,Global_User_ID,Row_Time_Stamp
-1,1,800,06/06/2022 20:07:52G,06/06/2022 05:04:31G,1,1,180,0,0,0,0,90,91,92,93,92,0,94,167,0,AUTOS.DM1,1252,NULL,"",0,1,0
+1,1,800,06/06/2022 20:27:21G,06/06/2022 05:04:31G,1,1,180,0,0,0,0,90,91,92,93,92,0,94,167,0,AUTOS.DM1,1252,NULL,"",0,1,0
 
 Model
 DiagramId,ModelId,Model_ID,ModelType,PlatformId,NamePrefix,SpaceHandling,CaseHandling,GenPrimaryKey,GenAlternateKey,GenInversionEntry,GenForeignKey,Notation,ModelNameId,RowOverhead,TableOverhead,IndexOverhead,BlobOverhead,BlobBlockSize,Global_User_ID,Row_Time_Stamp
@@ -85,7 +85,7 @@ SubmodelLink_ID,Model_ID,Parent_ID,Child_ID,UltimateParent_ID,NodeLevel,IsBottom
 DiagramDisplay
 DiagramId,ModelId,SubmodelId,DiagramDisplay_ID,Submodel_ID,PlatformId,Animate,ZoomFactor,HviewSize,VviewSize,HorizontalScrollPosition,VerticalScrollPosition,PageOrientation,PageSize,DisplayFormat,EntityDisplayInfo,ViewDisplayFormat,ViewDisplayInfo,Shadow,CompleteRoleName,ShowVerbs,ShowCardinality,MethodologyId,StraightRelLine,PageBoundary,ShowViewRelationship,ShowView,HideTrigger,Global_User_ID,Row_Time_Stamp,ShowSchemaObjEdge,ShowSchemaObj,SchemaObjDisplayFormat,ShowRelationshipName,ShowLogicalRelationshipName,ShowTriggerLabel,ShowShape,ShowShapeEdge,ShowShapeName,ShowShapeEdgeName,ShowShapeEdgeVerbs,TransformationDisplayFormat
 1,7,1,12,12,0,0,10000,0,0,528,-82,1,1,9,3269,1,0,1,0,1,1,0,0,0,0,0,0,2390,0,1,6,7,0,0,0,0,0,1,0,1,10
-1,1,1,1,1,0,0,20000,0,0,807,-221,1,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
+1,1,1,1,1,0,0,20000,0,0,594,14,1,1,8,3269,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
 
 GridDisplay
 DiagramId,ModelId,SubmodelId,GridDisplay_ID,Submodel_ID,Show,Snap,HorizontalSpacing,VerticalSpacing,HorizontalGridsPerLine,VericalGridsPerLine,Units,Global_User_ID,Row_Time_Stamp
@@ -392,7 +392,7 @@ Entity
 DiagramId,ModelId,EntityId,Entity_ID,Model_ID,EntityNameId,TableNameId,DefinitionId,NoteId,OwnerId,EntityTypeId,Flags,DataWhseSettings,NSTFlag,CompareFlags,PhysicalCompareFlags,Global_User_ID,Row_Time_Stamp
 1,7,1,67,12,161,161,0,0,0,0,0,0,0,0,0,2483,0
 1,7,2,68,12,162,162,0,0,0,0,0,0,0,0,0,2493,0
-1,1,1,1,1,161,161,0,0,0,0,0,0,0,0,0,117,0
+1,1,1,1,1,169,169,0,0,0,0,0,0,0,0,0,117,0
 1,7,4,69,12,9,9,0,0,0,0,0,0,0,0,0,2508,0
 1,1,2,2,1,162,162,0,0,0,0,0,0,0,0,0,118,0
 1,1,4,4,1,9,9,0,0,0,0,0,0,0,0,0,120,0
@@ -767,41 +767,40 @@ Lineage_Stream_Display_ID,Lineage_Stream_ID,Submodel_ID,DesiredRoutingStyle,Pare
 
 SmallString
 String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
-121,tarjeta_cliente_id_fk,0,0,0
 1,Main,0,0,0
-2,Diagram specific data dictionary.,0,0,0
 123,AGENCIA_PK,0,0,0
+2,Diagram specific data dictionary.,0,0,0
 3,Logical,0,0,0
-4,Main Model,0,0,0
 125,AUTO_PARTICULAR_PK,0,0,0
-5,Data Movement Rules,0,0,0
+4,Main Model,0,0,0
 126,AUTO_CARGA_PK,0,0,0
-7,AUTO,0,0,0
+5,Data Movement Rules,0,0,0
 128,AUTO_PK,0,0,0
-9,STATUS_AUTO,0,0,0
+7,AUTO,0,0,0
 130,STATUS_AUTO_PK,0,0,0
+9,STATUS_AUTO,0,0,0
 132,AUTO_NUM_SERIE_UK,0,0,0
 15,I,0,0,0
-16,P,0,0,0
 137,H_STATUS_AUTO_STATUS_AUTO_ID_FK,0,0,0
-17,M,0,0,0
+16,P,0,0,0
 138,H_STATUS_AUTO_AUTO_ID_FK,0,0,0
+17,M,0,0,0
 18,N,0,0,0
-19,O,0,0,0
 140,SUCURSAL_ID,0,0,0
+19,O,0,0,0
 20,AUTO_ID,0,0,0
 21,NUM,0,0,0
 22,MARCA,0,0,0
-23,VAR,0,0,0
 144,PAIS,0,0,0
-24,ANIO,0,0,0
+23,VAR,0,0,0
 145,PAIS_ID,0,0,0
+24,ANIO,0,0,0
 146,REGION,0,0,0
 26,NUM_SERIE,0,0,0
-27,STATUS_AUTO_ID,0,0,0
 148,MARCA_ID,0,0,0
-28,TIPO,0,0,0
+27,STATUS_AUTO_ID,0,0,0
 149,ACTIVO,0,0,0
+28,TIPO,0,0,0
 29,CLAVE,0,0,0
 151,MODELO_ID,0,0,0
 31,DESCRIPCION,0,0,0
@@ -812,18 +811,19 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 158,ventaAutosCAEH1_DD,0,0,0
 160,PAIS_F1_CAEH_S1,0,0,0
 161,SUCURSAL_F3_CAEH_S2,0,0,0
-41,CH,0,0,0
 162,AUTO_F2_CAEH_S1,0,0,0
-42,PESO_MAXIMO,0,0,0
+41,CH,0,0,0
 163,AUTO_PARTICULAR_F1_CAEH_S1,0,0,0
-43,TIPO_COMBUSTIBLE,0,0,0
+42,PESO_MAXIMO,0,0,0
 164,AUTO_CARGA_F1_CAEH_S1,0,0,0
-44,VOLUMEN,0,0,0
+43,TIPO_COMBUSTIBLE,0,0,0
 165,MODELO_R_CAEH_S1,0,0,0
-45,NOMBRE,0,0,0
+44,VOLUMEN,0,0,0
 166,MARCA_R_CAEH_S1,0,0,0
+45,NOMBRE,0,0,0
 167,ventaAutos_CAEH_S1.dm1,0,0,0
 168,oracle,0,0,0
+169,SUCURSAL_F2_CAEH_S1,0,0,0
 49,D,0,0,0
 53,EMAIL,0,0,0
 54,NUM_CILINDROS,0,0,0
@@ -864,6 +864,7 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 117,auto_status_id_fk,0,0,0
 119,pago_auto_id_fk,0,0,0
 120,auto_cliente_id_fk,0,0,0
+121,tarjeta_cliente_id_fk,0,0,0
 
 LargeString
 String_Id,Data,Row_Time_Stamp
@@ -1535,8 +1536,8 @@ StringUsage_Id,UniqueObject_Id,StringUsageType_Id,String_Id,Row_Time_Stamp
 4,22,38,4,0
 5,111,112,5,0
 6,111,113,5,0
-7,117,1,161,0
-8,117,2,161,0
+7,117,1,169,0
+8,117,2,169,0
 9,118,1,162,0
 10,118,2,162,0
 13,120,1,9,0
@@ -2108,7 +2109,7 @@ Identity_Value_ID,Table_Name,Column_Name,Next_Valid_Value,Global_User_ID,Row_Tim
 14,Bound_Dictionary_Object,Bound_Dictionary_Object_ID,1,0,0
 15,CheckConstraints,CheckConstraints_ID,1,0,0
 16,Circular_Layout,Circular_Layout_ID,12,0,0
-17,ColorDefault,ColorDefault_ID,733,0,0
+17,ColorDefault,ColorDefault_ID,735,0,0
 18,Column_Usage,Column_Usage_ID,1,0,0
 19,Components_Layout,Components_Layout_ID,12,0,0
 20,Configuration_Option,Configuration_Option_ID,1,0,0

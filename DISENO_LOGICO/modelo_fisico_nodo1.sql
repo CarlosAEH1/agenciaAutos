@@ -4,7 +4,7 @@
 -- Project :      AUTOS.DM1
 -- Author :       Jorge
 --
--- Date Created : Tuesday, June 07, 2022 04:54:50
+-- Date Created : Tuesday, June 07, 2022 13:11:19
 -- Target DBMS : Oracle 11g
 --
 
@@ -64,7 +64,7 @@ CREATE TABLE SUCURSAL_F2_CAEH_S1(
     SUCURSAL_ID          NUMBER(10, 0)    NOT NULL,
     NOMBRE               VARCHAR2(40)     NOT NULL,
     CLAVE                VARCHAR2(8)      NOT NULL,
-    "SUCURSAL ANEXA_ID"  NUMBER(10, 0),
+    SUCURSAL_ANEXA_ID    NUMBER(10, 0),
     PAIS_ID              NUMBER(4, 0)     NOT NULL,
     CONSTRAINT AGENCIA_PK PRIMARY KEY (SUCURSAL_ID), 
     CONSTRAINT RefPAIS_F1_CAEH_S114 FOREIGN KEY (PAIS_ID)

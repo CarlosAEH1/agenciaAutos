@@ -4,7 +4,7 @@
 -- Project :      AUTOS.DM1
 -- Author :       Jorge
 --
--- Date Created : Tuesday, June 07, 2022 05:22:42
+-- Date Created : Thursday, June 09, 2022 12:01:18
 -- Target DBMS : Oracle 11g
 --
 
@@ -192,9 +192,7 @@ CREATE TABLE TARJETA_CLIENTE_F2_CAEH_S2(
     ANIO_EXPIRA    VARCHAR2(2)      NOT NULL,
     MES_EXPIRA     VARCHAR2(2)      NOT NULL,
     TIPO           CHAR(1)          NOT NULL,
-    CONSTRAINT TARJETA_CLIENTE_PK PRIMARY KEY (CLIENTE_ID), 
-    CONSTRAINT tarjeta_cliente_id_fk FOREIGN KEY (CLIENTE_ID)
-    REFERENCES CLIENTE_F1_CAEH_S2(CLIENTE_ID)
+    CONSTRAINT TARJETA_CLIENTE_PK PRIMARY KEY (CLIENTE_ID)
 )
 ;
 

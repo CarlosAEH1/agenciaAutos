@@ -4,7 +4,7 @@
 -- Project :      AUTOS.DM1
 -- Author :       Jorge
 --
--- Date Created : Tuesday, June 07, 2022 04:56:53
+-- Date Created : Thursday, June 09, 2022 12:02:59
 -- Target DBMS : Oracle 11g
 --
 
@@ -131,9 +131,7 @@ CREATE TABLE TARJETA_CLIENTE_F1_IAEH_S1(
     CLIENTE_ID          NUMBER(10, 0)    NOT NULL,
     NUM_TARJETA         VARCHAR2(16)     NOT NULL,
     CODIGO_SEGURIDAD    NUMBER(3, 0)     NOT NULL,
-    CONSTRAINT TARJETA_CLIENTE_PK PRIMARY KEY (CLIENTE_ID), 
-    CONSTRAINT tarjeta_cliente_id_fk FOREIGN KEY (CLIENTE_ID)
-    REFERENCES CLIENTE_F2_IAEH_S1(CLIENTE_ID)
+    CONSTRAINT TARJETA_CLIENTE_PK PRIMARY KEY (CLIENTE_ID)
 )
 ;
 

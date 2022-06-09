@@ -26,5 +26,7 @@ create sequence,
 create procedure,
 create view,
 create synonym,
-create database link
+create database link,
+create trigger,
+create any directory
 to autos_bdd;

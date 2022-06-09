@@ -1,0 +1,37 @@
+set serveroutput on
+Prompt Eliminando datos
+Prompt Proporcione la PDB en la que se realizará la eliminación
+connect autos_bdd/autos_bdd@&&pdb
+create or replace procedure sp_elimina_datos wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+2e5 1ca
+nVzKSHL1Cq3BkjbuCcplfE19VVMwg40Jr9xqfHRDaGTnsK9j07jYVzAmxDklGvJ2LbrDRRzF
+RW8N+Kr3sy4OMrZmCWY6Ou3bSg84IcZ3iJGGsGQFybH1Y5qn+D+RFWAMcZmULUslAUjtn8NX
+GGozCRY0uo8UfWEAEyFSNFOurMrp9EZ+AfX/50eZ0zDRRMUVTvX79s2v9yKuRzq2P4+S4XS9
+uRR12ULLybIDwxtW3u9TM6epbu3Oub3H6Z77A0raCzWSPR0DWiR/FmipHz4SK9yXbRjGqtVB
++Qnk4tKiE6omS8FU4oQhHipbamp46bMNvRcBPXcHOitzSLGKMc0hD+JOcWnT7kALNeYsWZun
+a+DsZSGnAl5M7bYHayz89z1MPb/4a2g5holi2kUgddj10rONUUULXISaYbsBgX8tLn34BZZg
+DL42+auew97ATkS27dkS
+
+/
+exec sp_elimina_datos
+
+Prompt Listo
+exit

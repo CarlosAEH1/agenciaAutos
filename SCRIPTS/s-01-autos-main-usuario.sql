@@ -30,4 +30,4 @@ connect sys/&&syspass@iaehbdd_s2 as sysdba
 @s-01-autos-usuario.sql
 
 Prompt Listo
-exit
+disconnect

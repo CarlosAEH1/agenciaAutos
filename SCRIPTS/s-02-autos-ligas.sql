@@ -43,4 +43,4 @@ create database link caehbdd_s1.fi.unam using 'CAEHBDD_S1';
 Create database link caehbdd_s2.fi.unam using 'CAEHBDD_S2';
 
 Prompt Listo!
-exit
+disconnect

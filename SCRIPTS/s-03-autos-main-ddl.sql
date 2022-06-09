@@ -27,4 +27,4 @@ connect autos_bdd/autos_bdd@iaehbdd_s2
 @s-03-autos-iaeh-s2-ddl.sql
 
 Prompt Listo
-exit
+disconnect

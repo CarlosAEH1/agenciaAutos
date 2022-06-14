@@ -17,14 +17,14 @@ Cuando un cliente realiza la compra de un auto, se registran los pagos realizado
 
 Algunas sucursales cuentan o se asocian con otra llamada “sucursal anexa” empleada para realizar actividades administrativas. La sucursal anexa puede o no encontrarse en la misma área geográfica. Se requiere asociar la sucursal anexa a cada sucursal en caso de existir.
 
+### Requerimientos para distribucion
+
 |Numero de nodo|Caracteristicas|Nombre global de PDB|Sitio para fragmentos|
 |:------------:|:-------------:|:------------------:|:-------------------:|
 |1|Ubicado en la region AME, tiene mayor capacidad de procesamiento.|`caehbdd_s1.fi.unam`|`CAEH_S1`|
 |2|Ubicado en la region EUR.|`caehbdd_s2.fi.unam`|`CAEH_S2`|
 |3|Cuenta con VPN ue conecta al servidor con las oficinas centrales de la empresa, asi como herramientas para cifrado de datos. Ubicado en EUA.|`iaehbdd_s1.fi.unam`|`IAEH_S1`|
 |4|Cuenta con herramientas para realizar procesamieno de contenido multimedia, asi como una gran capacidad de almacenamiento.|`iaehbdd_s2.fi.unam`|`IAEH_S2`|
-
-### Requerimientos para distribucion
 
 Para administrar el catálogo de países, se emplea el valor de la región. Países de América (AME) se almacenan en el nodo 1 y países de Europa (EUR) en el nodo 2. Para realizar la administración del catálogo de sucursales, la empresa considera las siguientes situaciones: Existe un conjunto de sucursales consideradas como sucursales administradoras. Todas estas sucursales tienen la característica que los primeros 5 caracteres de su clave corresponden con el carácter ‘0’, es decir: 00000. Para este conjunto de sucursales, la empresa ha decidido ubicarlas en el nodo 3 ya que los dueños de la empresa requieren el uso de la VPN para poder acceder a los datos de este conjunto de sucursales. Para las sucursales restantes, la empresa ha decidido emplear el mismo criterio que el catálogo de países.
 
@@ -45,6 +45,9 @@ Para el caso de los siguientes catálogos la empresa ha decidido realizar las si
 <li>La tabla STATUS_AUTO conserva su nombre en los 4 nodos ya que se realizará la carga manual en cada uno. No requiere tratamiento alguno.
 <li>Para las tablas MARCA Y MODELO, se deberán renombrar por MARCA_R_<INICIALES>_S<N> y MODELO_R_<INICIALES>_S<N> ya que serán replicadas. Más adelante se detallará la estrategia de replicación.
 <li>Agregar estas 3 tablas en la tabla de fragmentación indicando como valor para la expresión algebraica la palabra COPIA MANUAL o TABLA REPLICADA según corresponda.
+
+
+## Esquema de fragmentación
 
 ![](RECURSOS/esquema_fragmentacion.jpeg)
 

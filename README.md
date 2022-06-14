@@ -46,6 +46,8 @@ Para el caso de los siguientes catálogos la empresa ha decidido realizar las si
 <li>Para las tablas MARCA Y MODELO, se deberán renombrar por MARCA_R_<INICIALES>_S<N> y MODELO_R_<INICIALES>_S<N> ya que serán replicadas. Más adelante se detallará la estrategia de replicación.
 <li>Agregar estas 3 tablas en la tabla de fragmentación indicando como valor para la expresión algebraica la palabra COPIA MANUAL o TABLA REPLICADA según corresponda.
 
+![](RECURSOS/esquema_fragmentacion.jpeg)
+
 
 ## Diseno logico
 
